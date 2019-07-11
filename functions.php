@@ -120,13 +120,15 @@ add_action( 'widgets_init', 'simple_diverse_portfolio_widgets_init' );
  * Enqueue scripts and styles.
  */
 function simple_diverse_portfolio_scripts() {
-	wp_enqueue_style( 'theme-stylesheet', get_template_directory_uri() . '/theme.css');
-    wp_enqueue_style( 'simple-diverse-portfolio-custom-style', get_template_directory_uri() . '/main.css');
+	wp_enqueue_style( 'simple-diverse-portfolio-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'theme-stylesheet', get_template_directory_uri() . '/css/theme.css');
+    wp_enqueue_style( 'simple-diverse-portfolio-custom-style', get_template_directory_uri() . '/css/main.css');	
     wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/js/theme.js', array(), '20190710', true );
     wp_enqueue_script( 'start-theme-script', get_template_directory_uri() . '/js/startTheme.js', array(), '20190710', true );
 
+	wp_enqueue_style( 'fontawesome-stylesheet', get_template_directory_uri() . '/css/fontawesome-pro-5.10.0.all.min.css');
 
-	wp_enqueue_style( 'simple-diverse-portfolio-style', get_stylesheet_uri() );
+
 
 	wp_enqueue_script( 'simple-diverse-portfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
