@@ -122,6 +122,7 @@ add_action( 'widgets_init', 'simple_diverse_portfolio_widgets_init' );
 function simple_diverse_portfolio_scripts() {
 	wp_enqueue_style( 'simple-diverse-portfolio-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'theme-stylesheet', get_template_directory_uri() . '/css/theme.css');
+	wp_enqueue_style( 'websiteFont-stylesheet', get_template_directory_uri() . '/css/websiteFont.css');
     wp_enqueue_style( 'simple-diverse-portfolio-custom-style', get_template_directory_uri() . '/css/main.css');	
     wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/js/theme.js', array(), '20190710', true );
     wp_enqueue_script( 'start-theme-script', get_template_directory_uri() . '/js/startTheme.js', array(), '20190710', true );
