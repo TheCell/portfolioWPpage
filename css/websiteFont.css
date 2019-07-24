@@ -1,5 +1,38 @@
 /* latin */
 @font-face {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('Lato Light'), local('Lato-Light'), url(../webfonts/Lato/Lato-Light.ttf) format('truetype');
+}
+/* latin */
+@font-face {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Lato Regular'), local('Lato-Regular'), url(../webfonts/Lato/Lato-Regular.ttf) format('truetype');
+}
+/* latin */
+@font-face {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Lato Regular Italic'), local('Lato-Regular-Italic'), url(../webfonts/Lato/Lato-RegularItalic.ttf) format('truetype');
+}
+/* latin */
+@font-face {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Lato Bold'), local('Lato-Bold'), url(../webfonts/Lato/Lato-Bold.ttf) format('truetype');
+}
+
+/* latin */
+@font-face {
     font-family: 'Roboto Slab';
     font-style: normal;
     font-weight: 700;
