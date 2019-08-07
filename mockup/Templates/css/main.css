@@ -1,0 +1,33 @@
+body
+{
+	color: var(--f_high);
+	font-family: 'Lato', sans-serif;
+}
+
+/* header */
+.titlepart > .title
+{
+	font-size: 72pt;
+}
+.titlepart > .subtitle
+{
+	font-size: 36pt;
+}
+
+@media (max-width: 960px)
+{
+
+}
+
+@media (max-width: 480px)
+{
+	/* header */
+	.titlepart > .title
+	{
+		font-size: 48pt;
+	}
+	.titlepart > .subtitle
+	{
+		font-size: 21pt;
+	}
+}
