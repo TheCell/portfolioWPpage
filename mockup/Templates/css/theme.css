@@ -9,10 +9,12 @@ body { background:var(--background) !important }
 .b_low { background:var(--b_low) !important ; fill:var(--b_low) !important }
 .b_inv { background:var(--b_inv) !important ; fill:var(--b_inv) !important }
 
+/*
 .bf_high { color:var(--b_high) !important; fill:var(--b_high) !important }
 .bf_med { color:var(--b_med) !important ; fill:var(--b_med) !important }
 .bf_low { color:var(--b_low) !important ; fill:var(--b_low) !important }
 .bf_inv { color:var(--b_inv) !important ; fill:var(--b_inv) !important }
+*/
 
 table tr th { color:var(--f_high) !important; }
 pre { color:var(--f_high) !important; }
