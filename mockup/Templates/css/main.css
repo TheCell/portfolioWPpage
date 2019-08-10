@@ -21,25 +21,44 @@ input:focus
 	color: var(--b_high);
 }
 
+a:link
+{
+	color: var(--b_high);
+	text-decoration: none;
+}
+
+a:visited
+{
+	color: var(--b_low);
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: var(--f_med);
+	text-decoration: none;
+}
+
+a:active
+{
+	color: var(--f_inv);
+	text-decoration: none;
+}
+
 /* full size, no media query */
 
 /* header */
 
 .header
 {
-	white-space: nowrap;
-}
-
-.header > div
-{
-	white-space: normal;
+	height: 130px;
 }
 
 .titlepart
 {
 	display: inline-block;
-	padding-left: 8EM;
-	width: calc(50% - 8EM);
+	padding-left: 4EM;
+	width: calc(70% - 4EM);
 }
 
 .titlepart > span
@@ -49,33 +68,104 @@ input:focus
 
 .titlepart > .title
 {
-	font-size: 72pt;
-	color: var(--f_med);
+	font-size: 70pt;
+	color: var(--f_inv);
+	text-transform: uppercase;
 }
+
 .titlepart > .subtitle
 {
-	font-size: 36pt;
-	padding-left: 3EM;
+	font-size: 25pt;
+	padding-left: 2EM;
 	color: var(--b_low);
+	text-transform: uppercase;
 }
 
 .searchfield
 {
+	margin-top: 1EM;
 	display: inline-block;
-	width: 50%;
+	width: 30%;
 }
+
+.searchfield > input
+{
+	width: 90%;
+	margin-left: 5%;
+}
+
+/* menu */
+.menu
+{
+	width: 6EM;
+	height: calc(100vh - 130px);
+	display: block;
+	position: relative;
+	/*display: inline-grid;*/
+	/*transform: rotate(-90deg)*/
+}
+
+/*
+.menu > a
+{
+	width: 100%;
+	height: 200px;
+	float: left;
+}
+*/
+
+.menu > a
+{
+	font-size: 18pt;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	/* Rotate from top left corner (not default) */
+	transform-origin: 0 0;
+	transform: rotate(-90deg);
+	line-height: 30px;
+}
+
+/* content */
+
 
 @media (max-width: 1024px)
 {
 	.titlepart
 	{
-		padding-left: 2EM;
+		padding-left: 1EM;
+		/* width: calc(70% - 1EM); */
+	}
+
+	.titlepart
+	{
+		width: 100%;
+		display: block;
+	}
+
+	.searchfield
+	{
+		width: 100%;
+		display: block;
 	}
 }
 
 @media (max-width: 480px)
 {
 	/* header */
+	.titlepart
+	{
+		width: 100%;
+		display: block;
+	}
+
+	.searchfield
+	{
+		width: 100%;
+		display: block;
+	}
+
 	.titlepart > .title
 	{
 		font-size: 48pt;
