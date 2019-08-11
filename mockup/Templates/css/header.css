@@ -1,0 +1,37 @@
+.header > .title
+{
+	font-size: 58pt;
+	color: var(--f_inv);
+	text-transform: uppercase;
+	display: block;
+}
+
+.header > .subtitle
+{
+	font-size: 20pt;
+	padding-left: 2EM;
+	color: var(--b_low);
+	text-transform: uppercase;
+	display: block;
+}
+
+@media (max-width: 1024px)
+{
+	.header
+	{
+		padding-left: 2REM;
+	}
+}
+
+@media (max-width: 480px)
+{
+	.header > .title
+	{
+		font-size: 44pt;
+	}
+	
+	.header > .subtitle
+	{
+		font-size: 14pt;
+	}
+}

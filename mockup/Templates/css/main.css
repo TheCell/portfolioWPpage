@@ -4,17 +4,6 @@ body
 	font-family: 'Lato', sans-serif;
 }
 
-input
-{
-	border-width: 0px;
-	outline: 0px;
-
-	background-color: transparent;
-	border-bottom: 1px solid;
-	border-color: var(--b_low);
-	color: var(--b_low);
-}
-
 input:focus
 {
 	border-color: var(--f_med);
@@ -45,133 +34,12 @@ a:active
 	text-decoration: none;
 }
 
-/* full size, no media query */
-
-/* header */
-
-.header
-{
-	height: 130px;
-}
-
-.titlepart
-{
-	display: inline-block;
-	padding-left: 4EM;
-	width: calc(70% - 4EM);
-}
-
-.titlepart > span
-{
-	display: block;
-}
-
-.titlepart > .title
-{
-	font-size: 70pt;
-	color: var(--f_inv);
-	text-transform: uppercase;
-}
-
-.titlepart > .subtitle
-{
-	font-size: 25pt;
-	padding-left: 2EM;
-	color: var(--b_low);
-	text-transform: uppercase;
-}
-
-.searchfield
-{
-	margin-top: 1EM;
-	display: inline-block;
-	width: 30%;
-}
-
-.searchfield > input
-{
-	width: 90%;
-	margin-left: 5%;
-}
-
-/* menu */
-.menu
-{
-	width: 6EM;
-	height: calc(100vh - 130px);
-	display: block;
-	position: relative;
-	/*display: inline-grid;*/
-	/*transform: rotate(-90deg)*/
-}
-
-/*
-.menu > a
-{
-	width: 100%;
-	height: 200px;
-	float: left;
-}
-*/
-
-.menu > a
-{
-	font-size: 18pt;
-	position: absolute;
-	top: 0;
-	left: 0;
-
-	/* Rotate from top left corner (not default) */
-	transform-origin: 0 0;
-	transform: rotate(-90deg);
-	line-height: 30px;
-}
-
-/* content */
-
-
 @media (max-width: 1024px)
 {
-	.titlepart
-	{
-		padding-left: 1EM;
-		/* width: calc(70% - 1EM); */
-	}
 
-	.titlepart
-	{
-		width: 100%;
-		display: block;
-	}
-
-	.searchfield
-	{
-		width: 100%;
-		display: block;
-	}
 }
 
 @media (max-width: 480px)
 {
-	/* header */
-	.titlepart
-	{
-		width: 100%;
-		display: block;
-	}
 
-	.searchfield
-	{
-		width: 100%;
-		display: block;
-	}
-
-	.titlepart > .title
-	{
-		font-size: 48pt;
-	}
-	.titlepart > .subtitle
-	{
-		font-size: 21pt;
-	}
 }
