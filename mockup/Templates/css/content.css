@@ -1,10 +1,26 @@
 .content
 {
+	display: grid;
+	grid-template-columns: repeat(3, calc(100% / 3));
+	overflow-y: scroll;
+	scrollbar-width: none; /* disable scrollbar firefox */
 	/*
 	display: grid;
 	grid-template-columns: repeat(3, 33%);
 	grid-auto-rows: 50%;
 	*/
+	/* Prevent vertical gaps */
+	/*
+	line-height: 0;
+	column-count: 3;
+	column-gap: 0px;
+	*/
+}
+
+/* disable scrollbar in chrome */
+.content::-webkit-scrollbar
+{
+	display: none;
 }
 
 .project
@@ -12,18 +28,30 @@
 	/*
 	width: 100%;
 	height: 100%;
+	height: calc(100% / 3);
+	float: left;
 	display: inline-block;
 	width: calc(100% / 3);
-	height: calc(100% / 2);
 	*/
+	/*
+	width: 100%;
+	height: auto;
+	*/
+}
+
+.infoOverProject
+{
+	margin-top: calc(-24pt + -36pt);
+	/*background-color: var(--background);*/
 }
 
 .projectTitleImage
 {
 	/*
 	width: 100%;
-	padding-top: 100%;
 	*/
+
+	padding-top: 100%;
 	background-image: url("../exampleImage.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -32,12 +60,18 @@
 
 .projectTitle
 {
+	color: var(--f_inv);
+	font-size: 36pt;
 	text-transform: uppercase;
+	/*text-shadow: 0px 0px 9px #000000;*/
 }
 
 .projectCategory
 {
+	color: var(--b_high);
+	font-size: 24pt;
 	text-transform: uppercase;
+	/*text-shadow: 0px 0px 9px #000000;*/
 }
 
 @media (max-width: 1024px)
