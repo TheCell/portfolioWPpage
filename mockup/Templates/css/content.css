@@ -94,10 +94,36 @@
 
 @media (max-width: 1024px)
 {
+	.content
+	{
+		grid-template-columns: repeat(2, calc(100% / 2));
+	}
 
+	.projectTitle > a
+	{
+		font-size: 16pt;
+	}
+
+	.projectCategory
+	{
+		font-size: 12pt;
+	}
 }
 
 @media (max-width: 480px)
 {
+	.content
+	{
+		grid-template-columns: repeat(1, 100%);
+	}
 
+	.projectTitle > a
+	{
+		font-size: 24pt;
+	}
+
+	.projectCategory
+	{
+		font-size: 16pt;
+	}
 }
