@@ -4,17 +4,6 @@
 	grid-template-columns: repeat(3, calc(100% / 3));
 	overflow-y: scroll;
 	scrollbar-width: none; /* disable scrollbar firefox */
-	/*
-	display: grid;
-	grid-template-columns: repeat(3, 33%);
-	grid-auto-rows: 50%;
-	*/
-	/* Prevent vertical gaps */
-	/*
-	line-height: 0;
-	column-count: 3;
-	column-gap: 0px;
-	*/
 }
 
 /* disable scrollbar in chrome */
@@ -25,61 +14,82 @@
 
 .project
 {
-	/*
-	width: 100%;
-	height: 100%;
-	height: calc(100% / 3);
-	float: left;
-	display: inline-block;
-	width: calc(100% / 3);
-	*/
-	/*
-	width: 100%;
-	height: auto;
-	*/
+	position: relative;
 }
 
 .infoOverProject
 {
-	margin-top: calc(-24pt + -36pt);
-	/*background-color: var(--background);*/
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+	bottom: 0;
 }
 
 .projectTitleImage
 {
-	/*
-	width: 100%;
-	*/
-
 	padding-top: 100%;
 	background-image: url("../exampleImage.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	filter: none;
+	filter: grayscale(100%) contrast(50%);
 	
 	transition: filter 0.3s;
 }
 
-.projectTitleImage:hover
+#lostInTransisionBG
 {
-	filter: grayscale(100%);
+	background-image: url("../lostintransmission.png");
 }
 
-.projectTitle
+#genArtBG
+{
+	background-image: url("../genArt.png")
+}
+
+.projectTitleImage:hover
+{
+	filter: none;
+}
+
+.infoOverProject:hover ~ .projectTitleImage
+{
+	filter: none;
+}
+
+.projectTitle > a
 {
 	color: var(--f_inv);
-	font-size: 36pt;
+	font-size: 24pt;
 	text-transform: uppercase;
-	background-color: rgba(0,0,0,0.5);
+	text-shadow: 2px 2px 0 var(--b_low),
+		-1px -1px 0 var(--b_low),
+		1px -1px 0 var(--b_low),
+		-1px 1px 0 var(--b_low),
+		1px 1px 0 var(--b_low);
+}
+
+.projectDescription
+{
+	height: 0;
+	padding: 0px;
+	transform-origin: 50% 100%;
+	transform: scale(1, 0);
+	transition: .5s;
+	color: var(--b_low);
+	background-color: var(--background);
 }
 
 .projectCategory
 {
 	color: var(--b_high);
-	font-size: 24pt;
+	font-size: 18pt;
 	text-transform: uppercase;
-	background-color: rgba(0,0,0,0.5);
+	/*-webkit-text-stroke: 1px var(--b_low);*/
+	text-shadow: -1px -1px 0 var(--b_low),
+		1px -1px 0 var(--b_low),
+		-1px 1px 0 var(--b_low),
+		1px 1px 0 var(--b_low);
 }
 
 @media (max-width: 1024px)
