@@ -21,9 +21,42 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+<div id="page" class="gridcontainer">
+	<!--
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'simple-diverse-portfolio' ); ?></a>
-	
+	-->
+	<div class="header">
+		<span class="title"><?php bloginfo( 'name' ); ?></span>
+		<?php
+			$simple_diverse_portfolio_description = get_bloginfo( 'description', 'display' );
+		?>
+		<span class="subtitle"><?php echo $simple_diverse_portfolio_description; /* WPCS: xss ok. */ ?></span>
+	</div>
+
+	<div class="search">
+		<input type="text" placeholder="SEARCH" />
+	</div>
+
+	<div class="menu">
+		<div class="menucontainer">
+			<?php
+			wp_nav_menu( array(
+				'menu_id'        => 'primary-menu',
+				'container'       => '',
+				'items_wrap'      => '%3$s',
+				'walker' => new Walker_SimpleDiversePortfolio_Nav_Menu(),
+			) );
+			?>
+			<!--
+			<span class="menuItem"><a href="postoverview1.html">Menu Item 1</a></span>
+			<span class="menuItem"><a href="postoverview2.html">Menu Item 2</a></span>
+			<span class="menuItem"><a href="postoverview3.html">Menu Item 3</a></span>
+			<span class="menuItem"><a href="postoverview3.html">Menu Item 3</a></span>
+			-->
+		</div>
+	</div>
+
+	<!--
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
@@ -42,8 +75,9 @@
 				?>
 				<p class="site-description"><?php echo $simple_diverse_portfolio_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
-		</div><!-- .site-branding -->
-
+		</div>
+	-->
+	<!--
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'simple-diverse-portfolio' ); ?></button>
 			<?php
@@ -52,7 +86,7 @@
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		</nav>--><!-- #site-navigation -->
+	<!--</header>--><!-- #masthead -->
 
 	<div id="content" class="site-content">
