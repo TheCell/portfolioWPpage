@@ -8,52 +8,34 @@
  */
 
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<div id="post-<?php the_ID(); ?>" class="project">
+	<!-- <img class="projectTitleImage" src="exampleImage.jpg">-->
+	<div class="infoOverProject">
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<div class="projectTitle">', '</div>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<div class="projectTitle"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></div>' );
 		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				simple_diverse_portfolio_posted_on();
-				simple_diverse_portfolio_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php simple_diverse_portfolio_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'simple-diverse-portfolio' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'simple-diverse-portfolio' ),
-			'after'  => '</div>',
-		) );
+		
 		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php simple_diverse_portfolio_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+		<!--<div class="projectTitle"><a href="https://adasdsf.ch">1D tetris</a></div>-->
+		<div class="projectCategory">
+			<?php
+			$categories_list = get_the_category_list( esc_html__( ', ', 'simple-diverse-portfolio' ) );
+			if ( $categories_list ) {
+				/* translators: 1: list of categories. */
+				printf( esc_html__( '%1$s', 'simple-diverse-portfolio' ), $categories_list ); // WPCS: XSS OK.
+			}
+			?>
+		</div>
+		<div class="projectDescription">
+			
+		</div>
+	</div>
+	
+	<a href="<?php echo esc_url( get_permalink() ) ?>">
+		<div class="projectTitleImage" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>')"></div>
+		<?php //simple_diverse_portfolio_post_thumbnail_link(); ?>
+	</a>
+</div>

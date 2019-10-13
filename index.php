@@ -15,12 +15,10 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
 		<?php
 		if ( have_posts() ) :
 
+			/*
 			if ( is_home() && ! is_front_page() ) :
 				?>
 				<header>
@@ -28,6 +26,7 @@ get_header();
 				</header>
 				<?php
 			endif;
+			*/
 
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -42,7 +41,7 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+			//the_posts_navigation();
 
 		else :
 
@@ -51,9 +50,7 @@ get_header();
 		endif;
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();
