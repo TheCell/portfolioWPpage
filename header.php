@@ -21,11 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="gridcontainer">
-	<!--
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'simple-diverse-portfolio' ); ?></a>
-	-->
-	<div class="header">
+<div id="page" class="gridcontainer"><div class="header">
 		<span class="title"><?php bloginfo( 'name' ); ?></span>
 		<?php
 			$simple_diverse_portfolio_description = get_bloginfo( 'description', 'display' );
@@ -47,12 +43,6 @@
 				'walker' => new Walker_SimpleDiversePortfolio_Nav_Menu(),
 			) );
 			?>
-			<!--
-			<span class="menuItem"><a href="postoverview1.html">Menu Item 1</a></span>
-			<span class="menuItem"><a href="postoverview2.html">Menu Item 2</a></span>
-			<span class="menuItem"><a href="postoverview3.html">Menu Item 3</a></span>
-			<span class="menuItem"><a href="postoverview3.html">Menu Item 3</a></span>
-			-->
 		</div>
 	</div>
 	<div id="content" class="site-content content">
