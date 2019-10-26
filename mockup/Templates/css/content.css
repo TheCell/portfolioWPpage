@@ -17,6 +17,16 @@
 	position: relative;
 }
 
+.singleProjectMeta
+{
+	position: relative;
+}
+
+.singleProjectTextAndMedia
+{
+	position: relative;
+}
+
 .infoOverProject
 {
 	position: absolute;

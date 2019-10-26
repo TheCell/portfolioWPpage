@@ -195,16 +195,18 @@ img {
  * 2. Remove the margin in Firefox and Safari.
  */
 
+/*
 button,
 input,
 optgroup,
 select,
 textarea {
-	font-family: inherit; /* 1 */
-	font-size: 100%; /* 1 */
-	line-height: 1.15; /* 1 */
-	margin: 0; /* 2 */
-}
+	font-family: inherit; *//* 1 */
+	/* font-size: 100%; *//* 1 */
+	/* line-height: 1; *//* 1 */
+	/*margin: 0; *//* 2 */
+/*}*/
+
 
 /**
  * Show the overflow in IE.
@@ -389,6 +391,7 @@ template {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+/*
 body,
 button,
 input,
@@ -401,6 +404,7 @@ textarea {
 	font-size: 1rem;
 	line-height: 1.5;
 }
+*/
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
@@ -465,7 +469,7 @@ html {
 *:before,
 *:after {
 	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
+	/*box-sizing: inherit;*/
 }
 
 body {
@@ -558,7 +562,7 @@ input[type="submit"]:focus {
 	border-color: #aaa #bbb #bbb;
 }
 
-input[type="text"],
+/*input[type="text"],*/
 input[type="email"],
 input[type="url"],
 input[type="password"],
