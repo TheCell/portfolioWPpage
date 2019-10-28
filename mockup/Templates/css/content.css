@@ -25,6 +25,35 @@
 .singleProjectTextAndMedia
 {
 	position: relative;
+	display: grid;
+	grid-column: 2 / span 2;
+	grid-template-columns: repeat(2, calc(100% / 2));
+}
+
+.singleProjectTextAndMedia > figure
+{
+	grid-column: 2;
+}
+
+.singleProjectTextAndMedia > *
+{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.singleProjectTextAndMedia > figure
+{
+	margin-right: 30px;
+}
+
+.singleProjectTextAndMedia > figure > *
+{
+	max-width: 100%;
+}
+
+.singleProjectTextAndMedia > figure iframe
+{
+	max-width: 100%;
 }
 
 .infoOverProject
@@ -107,6 +136,16 @@
 	.content
 	{
 		grid-template-columns: repeat(2, calc(100% / 2));
+	}
+	
+	.singleProjectTextAndMedia > *
+	{
+		grid-column: 1 / span 2;
+	}
+	
+	.singleProjectTextAndMedia > figure
+	{
+		grid-column: 1 / span 2;
 	}
 
 	.projectTitle > a
