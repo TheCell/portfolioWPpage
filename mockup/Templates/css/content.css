@@ -30,6 +30,11 @@
 	grid-template-columns: repeat(2, calc(100% / 2));
 }
 
+.singleProjectTextAndMedia p
+{
+	color: var(--b_med);
+}
+
 .singleProjectTextAndMedia > figure
 {
 	grid-column: 2;
@@ -133,9 +138,28 @@
 
 @media (max-width: 1024px)
 {
+	
+	.projectTitleImage
+	{
+		padding-top: 50%;
+		filter: none;
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
 	.content
 	{
 		grid-template-columns: repeat(2, calc(100% / 2));
+	}
+
+	.singleProjectMeta
+	{
+		grid-column: 1 / span 2;
+	}
+	
+	.singleProjectTextAndMedia
+	{
+		grid-column: 1 / span 2;
 	}
 	
 	.singleProjectTextAndMedia > *

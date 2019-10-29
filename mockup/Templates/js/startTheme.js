@@ -9,12 +9,13 @@ function startTheme()
             f_low:"#93c763",
             f_inv:"#963a46",
             b_high:"#678cb1",
-            b_med:"#4f6164",
+            b_med:"#6e6d6c",
             b_low:"#42464C",
             b_inv:"#ffcd22"
         });
     theme.install(document.body);
     theme.start();
+    // b_med:"#4f6164",
 }
 
 document.addEventListener('DOMContentLoaded', function(event)
