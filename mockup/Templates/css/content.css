@@ -119,6 +119,11 @@
 	filter: none;
 }
 
+.infoOverProject > div
+{
+	margin-top: 5px;
+}
+
 .projectTitle > a
 {
 	color: var(--f_inv);
@@ -190,6 +195,7 @@
 	.singleProjectTextAndMedia > *
 	{
 		grid-column: 1 / span 2;
+		margin-top: 10px;
 	}
 	
 	.singleProjectTextAndMedia > figure
