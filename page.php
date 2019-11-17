@@ -19,8 +19,9 @@ get_header();
 		<main id="main" class="site-main">
 
 		<?php
-		while ( have_posts() ) :
-			the_post();
+		$allPostsWPQuery = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1));
+		while ( $allPostsWPQuery->have_posts() ) :
+			$allPostsWPQuery->the_post();
 
 			get_template_part( 'template-parts/content', 'page' );
 

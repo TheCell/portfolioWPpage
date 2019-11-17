@@ -57,9 +57,11 @@ if ( is_singular() ) :
 <div class="singleProjectTextAndMedia">
 	<?php echo the_content(); ?>
 </div>
+
 <?php
 else :
 ?>
+
 <div id="post-<?php the_ID(); ?>" class="project">
 	<!-- <img class="projectTitleImage" src="exampleImage.jpg">-->
 	<div class="infoOverProject">

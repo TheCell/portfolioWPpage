@@ -29,8 +29,9 @@ get_header();
 			*/
 
 			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			$allPostsWPQuery = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1));
+			while ( $allPostsWPQuery->have_posts() ) :
+				$allPostsWPQuery->the_post();
 
 				/*
 				 * Include the Post-Type-specific template for the content.
