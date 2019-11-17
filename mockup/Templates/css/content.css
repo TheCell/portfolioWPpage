@@ -33,6 +33,7 @@
 
 .singleProjectTextAndMedia p
 {
+	grid-column: 1;
 	color: var(--b_med);
 }
 
@@ -175,6 +176,7 @@
 	text-shadow: none;
 }
 
+/*
 @media (min-width: 1500px)
 {
 	.content
@@ -182,6 +184,7 @@
 		grid-template-columns: 500px repeat(2, calc(100% / 3));
 	}
 }
+*/
 
 @media (max-width: 1024px)
 {
@@ -189,6 +192,11 @@
 	.singleProjectMeta .projectTitleImage
 	{
 		padding-top: 50%;
+	}
+	
+	.singleProjectTextAndMedia p
+	{
+		grid-column: inherit;
 	}
 
 	.content

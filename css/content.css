@@ -17,12 +17,81 @@
 	position: relative;
 }
 
+.singleProjectMeta
+{
+	position: relative;
+}
+
+.singleProjectTextAndMedia
+{
+	position: relative;
+	display: grid;
+	grid-column: 2 / span 2;
+	grid-template-columns: repeat(2, calc(100% / 2));
+	grid-auto-flow: dense;
+}
+
+.singleProjectTextAndMedia p
+{
+	grid-column: 1;
+	color: var(--b_med);
+}
+
+.singleProjectTextAndMedia > figure
+{
+	grid-column: 2;
+}
+
+.singleProjectTextAndMedia > *
+{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.singleProjectTextAndMedia > figure
+{
+	margin-right: 30px;
+}
+
+.singleProjectTextAndMedia > figure > *
+{
+	max-width: 100%;
+}
+
+.singleProjectTextAndMedia > figure iframe
+{
+	max-width: 100%;
+}
+
+.stickyWrapper
+{
+	position: sticky;
+	top: 0;
+}
+
+.singleProjectMeta .projectTitle
+{
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+.singleProjectMeta .projectTitleImage
+{
+	filter: none;
+}
+
+.singleProjectMeta .infoOverProject
+{
+	position: relative;
+}
+
 .infoOverProject
 {
 	position: absolute;
 	width: 100%;
 	z-index: 1;
 	bottom: 0;
+	color: var(--b_low);
 }
 
 .projectTitleImage
@@ -57,6 +126,11 @@
 	filter: none;
 }
 
+.infoOverProject > div
+{
+	margin-top: 5px;
+}
+
 .projectTitle > a
 {
 	color: var(--f_inv);
@@ -67,6 +141,11 @@
 		1px -1px 0 var(--b_low),
 		-1px 1px 0 var(--b_low),
 		1px 1px 0 var(--b_low);
+}
+
+.singleProjectMeta  .projectTitle > a
+{
+	text-shadow: none;
 }
 
 .projectDescription
@@ -92,11 +171,63 @@
 		1px 1px 0 var(--b_low);
 }
 
-@media (max-width: 1024px)
+.singleProjectMeta .projectCategory
+{
+	text-shadow: none;
+}
+
+/*
+@media (min-width: 1500px)
 {
 	.content
 	{
+		grid-template-columns: 500px repeat(2, calc(100% / 3));
+	}
+}
+*/
+
+@media (max-width: 1024px)
+{
+	
+	.singleProjectMeta .projectTitleImage
+	{
+		padding-top: 50%;
+	}
+	
+	.singleProjectTextAndMedia p
+	{
+		grid-column: inherit;
+	}
+
+	.content
+	{
 		grid-template-columns: repeat(2, calc(100% / 2));
+	}
+
+	.stickyWrapper
+	{
+		position: relative;
+	}
+
+	.singleProjectMeta
+	{
+		grid-column: 1 / span 2;
+	}
+	
+	.singleProjectTextAndMedia
+	{
+		grid-column: 1 / span 2;
+	}
+	
+	.singleProjectTextAndMedia > *
+	{
+		grid-column: 1 / span 2;
+		margin-top: 10px;
+	}
+	
+	.singleProjectTextAndMedia > figure
+	{
+		grid-column: 1 / span 2;
 	}
 
 	.projectTitle > a
@@ -107,6 +238,17 @@
 	.projectCategory
 	{
 		font-size: 12pt;
+	}
+	
+	.singleProjectTextAndMedia > *
+	{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.singleProjectTextAndMedia > figure
+	{
+		margin-right: 0;
 	}
 }
 
